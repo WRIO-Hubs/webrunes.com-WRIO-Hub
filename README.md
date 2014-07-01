@@ -1,2 +1,2 @@
-webRunes - [WRIO](http://wr.io) Hub
+webRunes <sup>[WRIO](http://wr.io) Hub</sup>
 =
