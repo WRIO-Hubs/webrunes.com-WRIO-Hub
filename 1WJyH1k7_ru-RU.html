@@ -9,7 +9,16 @@
     <meta name="keywords" content="story, cat">
     <title>История о коте</title>
 
-    
+    <!-- json-ld for WRIO -->
+    <script type="application/ld+json">
+        {
+        "entity": "article",
+        "templateVersion": "1.0",
+        "version": "1.0"
+        }
+    </script>
+
+    <!-- json-ld for article -->
     <script type="application/ld+json">
         {
         "entity": "article",
@@ -17,6 +26,9 @@
         "article": {
         "@context": "schema.org",
         "@type": "Article",
+        "name": "История о коте",
+        "inLanguage": "ru-RU",
+        "description": "Здесь будет идти описание статьи.",
         "articleBody": [
         "Есть кот. В коте десять килограммов. Есть кровать. У кровати высокая мягкая спинка шириной 10-15 сантиметров. И есть хозяева кота, которые спят на этой кровати.",
         "Ночью кот запрыгивает на спинку кровати и ходит по ней. У кота ночной променад. Но поскольку кот в прошлой жизни был коровой и некоторые особенности перенес в нынешнюю инкарнацию, на четвертой-пятой ходке он теряет равновесие и шмякается вниз. Если мне везет, кот падает рядом. Если не везет, на мою голову приземляются десять килограммов кота, причем почему-то всегда задницей.",
@@ -32,8 +44,40 @@
         "givenName": "Василий",
         "familyName": "Пупкин",
         "sameAs": "http://vasya-pupkin.webrunes.com"
+        },
+        "mentions": {
+        "@type": "Article",
+        "name": "Здесь будет название статьи на которую идет ссылка внутри данной статьи",
+        "inLanguage": "ru-RU",
+        "description": "Описание",
+        "url": "http://webrunes.com/url_ru-RU.html"
         }
         }
+        }
+    </script>
+
+    <!-- json-ld for search engines, ignore it -->
+    <script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Seattle",
+        "addressRegion": "WA",
+        "postalCode": "98052",
+        "streetAddress": "20341 Whitworth Institute 405 N. Whitworth"
+        },
+        "colleague": [
+        "http://www.xyz.edu/students/alicejones.html",
+        "http://www.xyz.edu/students/bobsmith.html"
+        ],
+        "email": "mailto:jane-doe@xyz.edu",
+        "image": "janedoe.jpg",
+        "jobTitle": "Professor",
+        "name": "Jane Doe",
+        "telephone": "(425) 123-4567",
+        "url": "http://www.janedoe.com"
         }
     </script>
 </head>

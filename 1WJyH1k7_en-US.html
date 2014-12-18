@@ -9,7 +9,16 @@
     <meta name="keywords" content="story, cat">
     <title>The story of the cat</title>
 
-    
+    <!-- json-ld for WRIO -->
+    <script type="application/ld+json">
+        {
+        "entity": "article",
+        "templateVersion": "1.0",
+        "version": "1.0"
+        }
+    </script>
+
+    <!-- json-ld for article -->
     <script type="application/ld+json">
         {
         "entity": "article",
@@ -17,6 +26,10 @@
         "article": {
         "@context": "schema.org",
         "@type": "Article",
+        "name": "The story of the cat",
+        "inLanguage": "en-US",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+        "keywords": ["story", "cat"],
         "articleBody": [
         "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
@@ -27,13 +40,53 @@
         "givenName": "Vasya",
         "familyName": "Pupkin",
         "sameAs": "http://vasya-pupkin.webrunes.com"
+        },
+        "mentions": [{
+        "@type": "Article",
+        "name": "This is for URL inside 'Story cat'. Article 2",
+        "inLanguage": "en-US",
+        "description": "Sed cursus ante dapibus diam. Sed nisi.",
+        "url": "http://webrunes.com/url2_en-EN.html"
+        },
+        {
+        "@type": "Article",
+        "name": "Article 3",
+        "inLanguage": "en-US",
+        "description": "Integer nec odio. Praesent libero.",
+        "url": "http://webrunes.com/url3_en-EN.html"
+        }
+        ]
         }
         }
+    </script>
+
+    <!-- json-ld for search engines, ignore it -->
+    <script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Seattle",
+        "addressRegion": "WA",
+        "postalCode": "98052",
+        "streetAddress": "20341 Whitworth Institute 405 N. Whitworth"
+        },
+        "colleague": [
+        "http://www.xyz.edu/students/alicejones.html",
+        "http://www.xyz.edu/students/bobsmith.html"
+        ],
+        "email": "mailto:jane-doe@xyz.edu",
+        "image": "janedoe.jpg",
+        "jobTitle": "Professor",
+        "name": "Jane Doe",
+        "telephone": "(425) 123-4567",
+        "url": "http://www.janedoe.com"
         }
     </script>
 </head>
 
 <body>
-<script src="http://wrio.s3-website-us-east-1.amazonaws.com/WRIO-InternetOS/main.js"></script>
+    <script src="http://wrio.s3-website-us-east-1.amazonaws.com/WRIO-InternetOS/main.js"></script>
 </body>
 </html>
