@@ -1,7 +1,7 @@
-#webRunes <sup>[WRIO](http://wr.io) Hub</sup>
+#webRunes <sup>[WRIO](http://wrioos.com) Hub</sup>
 (coming soon)
 
 ##Official Hub
-[https://webrunes.com](https://webrunes.com)
+[webrunes.com](http://webrunes.com)
 
 Powered by [Open Copyright](http://opencopyright.webrunes.com)
