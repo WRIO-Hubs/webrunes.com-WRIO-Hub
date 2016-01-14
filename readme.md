@@ -4,4 +4,4 @@
 ##Official Hub
 [webrunes.com](https://webrunes.com)
 
-Powered by [Open Copyright](https://opencopyright.webrunes.com)
+Powered by [Open Copyright](https://opencopyright.wrioos.com)
