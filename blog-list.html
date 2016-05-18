@@ -5,40 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.">
-    <meta name="author" content="User name1, User name2">
-    <meta name="keywords" content="story, cat">
-    <title>List</title>
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <title>Blog List</title>
 
-    <!-- json-ld for list -->
     <script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "ItemList",
-        "name": "List name goes here",
-        "itemListOrder": "http://schema.org/ItemListOrderAscending",
+        "name": "Blog List",
+        "itemListOrder": "schema.org/ItemListOrderAscending",
           "itemListElement": [
                 {
               "@type": "Article",
               "name": "Title 1",
               "about": "Description text",
-              "image": "http://domain.com/image.jpg",
-              "url": "http://domain.com/url.html"
+              "image": "wrio.s3-website-us-east-1.amazonaws.com/Default-WRIO-Theme/img/no-photo-200x200.png",
+              "url": "webrunes.com/blog.htm"
             },
                 {
               "@type": "Article",
               "name": "Title 2",
               "about": "Description text",
-              "image": "http://domain.com/image2.jpg",
-              "url": "http://domain.com/url2.html"
+              "image": "wrio.s3-website-us-east-1.amazonaws.com/Default-WRIO-Theme/img/no-photo-200x200.png",
+              "url": "webrunes.com/ru/"
             },
                 {
               "@type": "Article",
               "name": "Title 3",
               "about": "Description text",
-              "image": "http://domain.com/image3.jpg",
-              "url": "http://domain.com/url3.html"
+              "image": "wrio.s3-website-us-east-1.amazonaws.com/Default-WRIO-Theme/img/no-photo-200x200.png",
+              "url": "alexey-anshakov.webrunes.com"
             }
-          ]
+          ],
+        "author": {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "givenName": "Alexey",
+        "familyName": "Anshakov",
+        "sameAs": "alexey-anshakov.webrunes.com"
+        },
+        "editor": ""
         }
     </script>
 </head>
