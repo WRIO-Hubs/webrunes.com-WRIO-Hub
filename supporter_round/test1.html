@@ -1,0 +1,767 @@
+<!-- A working version, but would be great to made refactoring, optimize, beautify and move js into a separate file -->
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="webRunes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Upgrade to a blockchain-powered, machine-readable, and user-centric Web 3.0">
+	<!-- Fav Icon  -->
+	<link rel="shortcut icon" href="../images/favicon.png">
+	<!-- Site Title  -->
+	<title>WRIO Internet OS</title>
+	<!-- Vendor Bundle CSS -->
+	<link rel="stylesheet" href="../assets/css/vendor.bundle.css">
+	<!-- Custom styles for this template -->
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/theme.css">
+	<link rel="stylesheet" href="../assets/css/wrioos.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<style>
+	html,body{overflow:inherit!important}
+	#content{opacity:0}
+	#reward{font-size:140px;color:#7a0fff;text-align:center}
+	#error{opacity:0;transition:opacity 1000ms;position:relative;top:-12px}
+	#tokeswidth,#tokeswidth2{transition:all 0.5s ease-out;width:100%}
+	#step2,#step3,#step4,#step5{opacity:.5;transition:all 0.5s}
+	#logout,#balance_dashboard,#dashboard,#reserved,#kyc_manual_review,#kyc_completed,
+	#country-section-title,#personal-section-title,#contact-section-title,
+	#step2_body,#step3_body,#step4_body,#step5_body,#sold,#tokens_progress
+	{display:none}
+	#kyc_completed,#kyc_manual_review{margin-top:20px}
+	#pay-button{width:200px}
+		#pay-button a:hover{cursor:pointer}
+	</style>
+
+
+
+	<meta name="description" content=""/>
+	<link rel="canonical" href="https://wr.io/supporter_round/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="The next level of browsing experience is here" />
+	<meta property="og:description" content="Grab the opportunity to become an early supporter today and Recieve 25,000 WGD per 1 ETH!" />
+	<meta property="og:url" content="https://wr.io/supporter_round/" />
+	<meta property="og:site_name" content="wr.io" />
+	<meta property="article:publisher" content="https://www.facebook.com/webRunes" />
+	<meta property="article:tag" content="blog traffic" />
+	<meta property="article:tag" content="images" />
+	<meta property="article:tag" content="WRIO Internet OS" />
+	<meta property="article:tag" content="Web 3.0" />
+	<meta property="og:image" content="https://webrunes.com/img/cards/supporter_round.jpg" />
+	<meta property="og:image:secure_url" content="https://webrunes.com/img/cards/supporter_round.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="1200" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="The next level of browsing experience is here" />
+	<meta name="twitter:description" content="Grab the opportunity to become an early supporter today and Recieve 25,000 WGD per 1 ETH!" />
+	<meta name="twitter:site" content="@webRunes" />
+	<meta name="twitter:image" content="https://webrunes.com/img/cards/supporter_round.jpg" />
+	<meta name="twitter:creator" content="@webRunes" />
+</head>
+
+<body class="theme-dark" data-spy="scroll" data-target="#mainnav" data-offset="80">
+
+	<!-- Header -->
+	<header class="site-header is-sticky">
+
+		<!-- Navbar -->
+		<div class="navbar navbar-expand-lg is-transparent" id="mainnav">
+			<nav class="container">
+				<a class="navbar-brand animated" data-animate="fadeInDown" data-delay=".65" href="./">
+					<img class="logo logo-dark" alt="logo" src="../images/logo.png" srcset="../images/logo2x.png 2x">
+					<img class="logo logo-light" alt="logo" src="../images/logo-white.png" srcset="../images/logo-white2x.png 2x">
+				</a>
+
+				<ul class="navbar-nav navbar-btns animated" data-animate="fadeInUp" data-delay=".75">
+					<li id="affiliates" class="nav-item"><a class="nav-link btn btn-outline menu-link" href="https://affiliates.wr.io" data-animate="fadeInDown" data-delay="1">Affiliates</a></li>
+					<li id="wrio" class="nav-item"><a class="nav-link btn btn-outline menu-link" href="https://wr.io" data-animate="fadeInDown" data-delay="1">Back to wr.io</a></li>
+					<li id="logout" class="nav-item"><a class="nav-link btn btn-outline menu-link" href="https://wr.io/supporter_round/" data-animate="fadeInDown" data-delay="1">Logout</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- End Navbar -->
+
+<br><br><br>
+		<!-- Banner/Slider -->
+		<div id="header" class="col-sm-12">
+			<!-- It's for infromation purposes only (public&affiliates records) and thus no need to secure this data -->
+			<form id="gform" method="POST" data-email="info@webrunes.com"
+			   action="https://script.google.com/macros/s/AKfycbyZBkpxDstfnhec6qPW3uAA0E4aa6elbtCC01ai/exec">
+				 <input id="form_email" type="text" name="Email" hidden>
+				 <input id="form_ethaddress" type="text" name="ETHaddress" hidden>
+				 <input id="form_wgd" type="text" name="WGD" hidden>
+				 <input id="form_firstname" type="text" name="FirstName" hidden>
+				 <input id="form_lastname" type="text" name="LastName" hidden>
+				 <input id="form_kyc" type="text" name="KYC" hidden>
+				 <input id="form_friend" type="text" name="Friend" hidden>
+				 <input id="form_txhash" type="text" name="TXhash" hidden>
+
+				 <input id="gform-btn" class="btn" type="submit" name="SubmitButton" value="Submit" hidden>
+			</form>
+	    <!-- change the form action to your script url -->
+			<div id="login_form" class="container align-items-center">
+					<div class="row col-sm-12" data-animate="fadeInUp" data-delay=".3">
+						<div class="col-sm-12 text no-pd">
+
+						<div class="row text-center">
+							<div class="col">
+								<div class="section-head col-lg-10 offset-lg-1 col-md-12 offset-md-0">
+									<br><br><br>
+									<h2 class="section-title animated" data-animate="fadeInUp" data-delay="0.5">Welcome to Supporter Round!
+										<span>Welcome to Supporter Round!</span>
+									</h2>
+									<div id="sold">
+										<div class="alert alert-primary animated" data-animate="fadeInUp" data-delay=".75">Because of the excessive numbers of participants the entire Support Round pool will be distributed exactly on the basis of <b>25,000* WGD per 1 ETH</b>, and special Airdrop Share will be null! However, due to a low ETH exchange rate, Special Round conditions coincided with Pre-Sale conditions and offer the purchase of WGD with a <b>100% bonus</b>!</div>
+										<p class="sub-title animated" data-animate="fadeInUp" data-delay=".9" style="position:relative"><small><i>* $1,000 equivalent. Calculated for the default WGD price; more details in the <a href="https://wr.io/WhitePaper.pdf" target="_blank">White Paper</a>&nbsp;&nbsp;<sup><i class="fa fa-window-maximize"></i></sup></i></small></p>
+										<p class="sub-title animated" data-animate="fadeInUp" data-delay="1.2"><br>All funds will be used for further pre-Token Sale promotion of the project.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row roadmap-list align-items-end animated col-md-12 offset-md-0 col-sm-4 offset-sm-4" data-animate="fadeInUp" data-delay="1">
+							<div class="col-lg">
+								<div class="single-roadmap roadmap-sm roadmap-done">
+									<h6>Pre-Sale</h6>
+									<p>10,000,000 WGD</p>
+									<p class="date">$200,000 collected</p>
+								</div>
+							</div><!-- .col  -->
+							<div class="col-lg width-0">
+								<div class="single-roadmap roadmap-down roadmap-done">
+									<h6>Bounty Campaign</h6>
+									<p>12,000,000 WGD</p>
+									<p class="date">April 29, 2018</p>
+								</div>
+							</div><!-- .col  -->
+							<div class="col-lg">
+								<div class="single-roadmap roadmap-lg roadmap-done">
+									<h6>Airdrop Campaign</h6>
+									<p>5,000,000 WGD</p>
+									<p class="date">May 2, 2018</p>
+								</div>
+							</div><!-- .col  -->
+							<div class="col-lg width-0">
+								<div class="single-roadmap roadmap-down roadmap-done">
+									<h6>Supporter Round</h6>
+									<p>2,500,000 WGD + special Airdrop Share</p>
+									<p class="date">We're here</p>
+								</div>
+							</div><!-- .col  -->
+							<div class="col-lg">
+								<div class="single-roadmap roadmap-lg">
+									<h6>Special Round</h6>
+									<p>20,000,000 WGD</p>
+									<p class="date">48hr prior Token Sale: Stage 1</p>
+									<p class="date">Whitelist already full</p>
+								</div>
+							</div><!-- .col  -->
+							<div class="col-lg width-0">
+								<div class="single-roadmap roadmap-down">
+									<h6>Stage 1</h6>
+									<p>40,000,000 WGD</p>
+									<p class="date">July 31, 2018</p>
+								</div>
+							</div><!-- .col  -->
+							<div class="col-lg">
+								<div class="single-roadmap roadmap-lg">
+									<h6>Stage 2</h6>
+									<p>80,000,000 WGD</p>
+								</div>
+							</div><!-- .col  -->
+							<div class="col-lg width-0">
+								<div class="single-roadmap roadmap-down">
+									<h6>Stage 3</h6>
+									<p>160,000,000 WGD</p>
+								</div>
+							</div><!-- .col  -->
+							<div class="col-lg">
+								<div class="single-roadmap roadmap-lg">
+									<h6>Buyback Fund</h6>
+									<p>Bancor support</p>
+								</div>
+							</div><!-- .col  -->
+						</div><!-- .row  -->
+						<br><br>
+						<div id="tokens_progress" class="text-center animated" data-animate="fadeInUp" data-delay=".05">
+							 <h4>Total tokens 2,500,000 WGD</h4>
+							 <div class="progress progress-line-info big">
+									<div id="tokeswidth" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%"></div>
+							 </div>
+							 <br>
+							 <h5 class="sub-heading tokens"></h5>
+						</div>
+						<br>
+						<br>
+						<br>
+
+						<div class="col-sm-12 text-center animated" data-animate="fadeInUp" data-delay=".1">
+							<div id="no_account">
+								<h2 style="display: none;" class="name">Your ETH address</h2>
+								<input style="display: none;" type="text" name="ETH" id="eth_address" placeholder="Your ETH address" required="true" disabled>
+								<div id="error">Please enter a valid ETH address.</div>
+								<div class="col-sm-12 text text-center">
+										<div id="login-metamask"></div>
+								</div>
+							</div>
+						<br><br>
+						<p>Not a tech-savvy or experiencig problems? <a href="mailto:info@webrunes.com?Subject=Manual%20processing%20of%20my%20application&Body=Hello%20webRunes%2C%0Aplease%20contact%20me%20for%20manual%20processing%20of%20my%20application.%0A%0AThank%20you." target="_blank">Contact us</a>&nbsp;<sup><i class="fa fa-window-maximize"></i></sup> for manual processing of your application.</p>
+						<br>
+					</div>
+
+			</div>
+			</div><!-- .row -->
+		</div><!-- .container -->
+
+
+	<div id="balance_dashboard" class="col-md-8 offset-md-2 col-sm-12 offset-sm-0 align-items-center max-width">
+		<div class="container">
+			<div class="row col-lg-10 offset-lg-1 col-md-12 offset-md-0 align-items-center text-center">
+				<div class="col-sm-12 text no-pd" id="content">
+					<h2>Your WGD balance is</h2>
+					<br>
+					<h1><span id="reward"></span></h1>
+					<br>
+					<br>
+					<div id="txhash_link"></div>
+					<br>
+					<div class="col-sm-12 text no-pd">
+						<p class="text-center">Tokens will be released to your ETH address
+							<br><b id="user_address"></b>
+							<br>on July 31, when Token Sale starts.
+							<br><br>Want more WGD? <a href="https://wr.io/registration/">Token Sale registration</a> is now open!
+							<br><br>Have questions? Contact us on webRunes <a href="https://t.me/webRunesGroup" target="_blank">Telegram group</a>&nbsp;<sup><i class="fa fa-window-maximize"></i></sup></i></p>
+						<br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="dashboard" name="step1" class="dashboard">
+		<div class="container">
+			<div class="row">
+				<div id="sold2" class="col-sm-12 text text-center animated dashboard_tokens" data-animate="fadeInUp" data-delay=".25">
+					 <h4>Total tokens 2,500,000 WGD</h4>
+					 <div class="progress progress-line-info big">
+						<div id="tokeswidth2" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:100%"></div>
+					</div>
+					<br>
+					<h5 class="sub-heading tokens"></h5>
+				</div>
+				<div class="col-sm-12 steps animated" data-animate="fadeInUp" data-delay=".5">
+					<div class="row">
+						<div class="col-sm-2 text-center">
+							<img src="../assets/images/icons/user.png" alt="">
+						</div>
+						<div class="col-sm-10">
+						 <h4>Step 1 &middot; Logged with ETH address</h4>
+		 				 <h5 id="logged_as"></h5>
+						 <p>Purchased WGD will be delivered to this address.</p>
+						 <br>
+						 <a id="step1_btn" href="#step2_anchor" class="btn" onclick="step2();">Next</a>
+						</div>
+						<div class="col-sm-12" id="step2_anchor"></div>
+					</div>
+				</div>
+				<div class="col-sm-12 steps animated" data-animate="fadeInUp" data-delay=".6">
+					<div id="step2" class="row">
+						<div class="col-sm-2 text-center">
+							<img src="../assets/images/icons/user-centric.png" alt="">
+						</div>
+						<div class="col-sm-10">
+						 <h4>Step 2 &middot; How much WGD would you like to buy?</h4>
+						 <div id="step2_body">
+						 <p>At this stage you just reserve the option to purchase. The payment will become available after <b>Step 3 · KYC process</b>.</p>
+						 <div id="WGD_select">
+			        	<select id="WGD">
+			            <option value="1" required>25,000 WGD for 1 ETH &middot; MIN</option>
+			            <option value="2">50,000 WGD for 2 ETH</option>
+			            <option value="3">75,000 WGD for 3 ETH</option>
+			            <option value="4">100,000 WGD for 4 ETH</option>
+			            <option value="5">125,000 WGD for 5 ETH</option>
+			            <option value="6">150,000 WGD for 6 ETH</option>
+			            <option value="7">175,000 WGD for 7 ETH</option>
+			            <option value="8">200,000 WGD for 8 ETH</option>
+			            <option value="9">225,000 WGD for 9 ETH</option>
+			            <option value="10">250,000 WGD for 10 ETH &middot; MAX</option>
+			            <option value="0" disabled>Want more? Contact us at info@webRunes.com for manual processing of your application</option>
+			        	</select>
+							</div>
+							<h5 id="reserved">RESERVED: <b id="reserved_amount"></b> WGD</h5>
+							<br>
+							<p><b>IMPORTANT:</b> The more WGD you collect, the more tokens you'll be able to obtain during the following rounds of Airdrop held on pro rata basis. More details in the <a href="https://wr.io/WhitePaper.pdf" target="_blank">White Paper</a></i>&nbsp;<sup><i class="fa fa-window-maximize"></i></sup></p>
+							<form id="step2_form">
+								<p><label for="usa"><input type="checkbox" name="usa" id="usa" required>&nbsp;Check here to confirm that you are NOT a U.S. citizen, resident or entity (each a "U.S. Person"), nor you are purchasing WGD Tokens on behalf of a U.S. Person</label></p>
+								<p><label for="resident"><input type="checkbox" name="resident" id="resident" required>&nbsp;Check here to confirm that you are NOT a citizen, resident or entity of any jurisdiction in which the purchase of WGD Tokens is prohibited or otherwise adversely affected by any applicable regulation (each a "Restricted Person"), nor you are purchasing WGD Tokens on behalf of a Restricted Person</label></p>
+								<p><label for="agreement"><input type="checkbox" name="agreement" id="agreement" required>&nbsp;Check here to confirm that you have read, understood and agree to the <a href="https://wr.io/TokenPurchaseAgreement.pdf" target="_blank">Token Purchase Agreement</a>&nbsp;<sup><i class="fa fa-window-maximize"></i></sup> and understand, that tokens will be released to your ETH address on July 31, when Token Sale starts.</label></p>
+								<br>
+								<input id="next-btn" class="btn" type="submit" name="SubmitButton" value="Next">
+							</form>
+							<script>
+							document.getElementById('step2_form').onsubmit = e => e.preventDefault();
+							</script>
+							<a id="step2_btn" href="#step3_anchor" class="btn" onclick="step3();" hidden>Next</a>
+			 			</div>
+			 		</div>
+					<div class="col-sm-12" id="step3_anchor"></div>
+				</div>
+			 </div>
+		 <div class="col-sm-12 steps animated" data-animate="fadeInUp" data-delay=".7">
+		 	<div id="step3" class="row">
+			 <div class="col-sm-2 text-center">
+				 <img src="../assets/images/icons/kyc.png" alt="">
+			 </div>
+			 <div class="col-sm-10">
+				<h4>Step 3 &middot; KYC process</h4>
+				<div id="step3_body">
+					<div id="kyc">
+						<p>Have problems? <a href="mailto:info@webrunes.com?Subject=Manual%20processing%20of%20my%20application&Body=Hello%20webRunes%2C%0Aplease%20contact%20me%20for%20manual%20processing%20of%20my%20application.%0A%0AThank%20you." target="_blank">Contact us</a>&nbsp;<sup><i class="fa fa-window-maximize"></i></sup> for manual processing of your application.</p>
+						<div id="idm-container"></div>
+						<br>
+						<div class="idm"></div>
+					</div>
+					<div id="kyc_manual_review">
+						<h5>STATUS: Under review</h5>
+						<p>Your documents have been received, however they need to be verified manually. After the verification you will receive an email notification.</p>
+						<br>
+					</div>
+					<div id="kyc_completed">
+						<h5>STATUS: Accepted!</h5>
+						<br>
+						<a id="step3_btn" href="#step4_anchor" class="btn" onClick="step4();">Next</a>
+					</div>
+				 </div>
+				</div>
+				<div class="col-sm-12" id="step4_anchor"></div>
+			</div>
+		 </div>
+		<div class="col-sm-12 steps animated" data-animate="fadeInUp" data-delay=".8">
+		 <div id="step4" class="row">
+				<div class="col-sm-2 text-center">
+					<img src="../assets/images/icons/payment.png" alt="">
+				</div>
+				<div class="col-sm-10">
+					<h4>Step 4 &middot; Payment</h4>
+					<div id="step4_body">
+						<div id="buyout_notification"></div>
+				  	<div id="pay-button"></div>
+						<a id="step4_btn" href="#step5_anchor" class="btn" onClick="step5();" hidden>Next</a>
+					</div>
+				</div>
+				<div class="col-sm-12" id="step5_anchor"></div>
+			</div>
+		 </div>
+		<div class="col-sm-12 steps animated" data-animate="fadeInUp" data-delay=".9">
+		 <div id="step5" class="row">
+				<div class="col-sm-2 text-center">
+					<img src="../assets/images/icons/thank_you.png" alt="">
+				</div>
+				<div class="col-sm-10">
+					<h4>Step 5 &middot; Check your balance</h4>
+					<div id="step5_body">
+						<p><b>Thank you</b> for your great support!</p>
+						<br><br>
+						<a id="step5_btn" href="#" class="btn" onClick="step6();">Check balance</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+	</div>
+	<!-- Start Section -->
+	</div>
+
+	<script type="text/javascript">
+		var load_script_with_data_cfasync = (url, cb) => {
+			var
+				script = document.createElement('script'),
+				other = document.getElementsByTagName('script')[0];
+
+			script.setAttribute("data-cfasync", false);
+			script.onload = cb;
+			script.src = url;
+			other.parentNode.insertBefore(script, other);
+		};
+
+		function step2()
+			{
+				document.getElementById("step1_btn").style.display = "none";
+				document.getElementById("step2_btn").style.display = "inline-block";
+				document.getElementById("step2").style.opacity = 1;
+				document.getElementById("step2_body").style.display = "block";
+			}
+
+			$(function () {
+			    $('#step2_form').submit(function () {
+			        if($(this).valid()) {
+									var e = document.getElementById("WGD");
+									$('#reserved_amount').prepend(''+e.options[e.selectedIndex].value*25+',000 for '+e.options[e.selectedIndex].value+' ETH');
+									wgd_reserved_amount = e.options[e.selectedIndex].value*25;
+									document.getElementById('step2_btn').click();
+			        }
+			    });
+			});
+
+		function step3()
+			{
+				document.getElementById("step2_form").style.display = "none";
+				document.getElementById("WGD_select").style.display = "none";
+				document.getElementById("reserved").style.display = "block";
+				document.getElementById("step3_btn").style.display = "inline-block";
+				document.getElementById("step3").style.opacity = 1;
+				document.getElementById("step3_body").style.display = "block";
+			}
+
+		function step4()
+			{
+				window.hide_at_step3_interval && clearInterval(hide_at_step3_interval);
+
+				document.getElementById("step3_btn").style.display = "none";
+				document.getElementById("step4_btn").style.display = "inline-block";
+				document.getElementById("step4").style.opacity = 1;
+				document.getElementById("step4_body").style.display = "block";
+
+				const
+					amount = Math.round(Number(String(wgd_reserved_amount).replace(',', '')) / 25000) || Number(document.getElementById(form_wgd).value),
+					address = '0x3b6Df61328E519B243437b1C65146A5943e83231',
+					container = 'pay-button';
+
+				document.getElementById("buyout_notification").innerHTML = '<h5>Now you may buy out <b>' + parseInt(wgd_reserved_amount) + ',000</b> WGD reserved at Step 2!</h5><br>';
+
+				wrio_metamask_plugin(container, address, amount, (err, txhash) => {
+					completed = true;
+					document.getElementById("form_txhash").value = txhash;
+					document.getElementById("buyout_notification").innerHTML = '<h5>STATUS: transaction has been conducted!</h5><p>Check <a href="https://etherscan.io/tx/'+txhash+'" target="_blank">your transaction</a>&nbsp;<sup><i class="fa fa-window-maximize"></i></sup></i> on Etherscan.io</p>';
+					document.getElementById('gform-btn').click(); // now we have txhash and can save it to Google Table
+					document.getElementById("pay-button").style.display = "none";
+					document.getElementById('step4_btn').click();
+				});
+			}
+
+		function step5()
+			{
+				document.getElementById("step4_btn").style.display = "none";
+				document.getElementById("step5_btn").style.display = "inline-block";
+				document.getElementById("step5").style.opacity = 1;
+				document.getElementById("step5_body").style.display = "block";
+			}
+
+		function step6()
+			{
+				document.getElementById("dashboard").style.display = "none";
+				check_completed();
+			}
+	</script>
+
+	<!-- Preloader !remove please if you do not want -->
+	<div id="preloader">
+		<div id="loader"></div>
+		<div class="loader-section loader-top"></div>
+   		<div class="loader-section loader-bottom"></div>
+	</div>
+	<!-- Preloader End -->
+
+	<!-- JavaScript (include all script here) -->
+	<script src="https://wr.io/assets/js/jquery.bundle.js"></script>
+	<script src="https://wr.io/assets/js/script.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+
+		<script>
+		var tokensleft;
+		var percent;
+		var wgd_reserved_amount;
+		document.addEventListener("DOMContentLoaded", function() {
+			$.getJSON("https://spreadsheets.google.com/feeds/list/1YqDOMfPw7Xd5rryouF931Y3aSfUboNGkip7qMdvY3BQ/2/public/values?alt=json", function(data) {
+				tokensleft = data.feed.entry[0]['gsx$total']['$t'];
+				$('.tokens').prepend('<b>'+tokensleft+'</b> WGD available');
+				tokensleft = tokensleft.replace(/\,/g,'');
+				percent = Number(tokensleft)/2500000*100;
+				document.getElementById('tokeswidth').style.width = percent + "%";
+			});
+		});
+
+		var fileInterval = setInterval(function(){
+			if (tokensleft <= 0) {
+				tokensleft = 0;
+				document.getElementById("tokens_progress").innerHTML = "<h2>SOLD OUT!</h2><p>Participants can login to complete payment of reserved WGD or check the balance.<br>Missed to buy WGD? <a href='https://wr.io/registration/'>Token Sale registration</a> is now open!</p>";
+				document.getElementById("tokens_progress").style.display = "block";
+      	clearInterval(fileInterval); // clear interval
+			}
+			if (tokensleft > 0) {
+				document.getElementById("sold").style.display = "block";
+				document.getElementById("tokens_progress").style.display = "block";
+      	clearInterval(fileInterval); // clear interval
+			}
+		},500);
+
+		var idmm = 'login-metamask';
+
+		function wait_element_load (id, interval, cb) {
+			setTimeout(
+				() => document.getElementById(id)
+					? cb()
+					: wait_element_load(id, interval, cb),
+				interval
+			)
+		}
+
+		function hide_at_step3 (id_fn) {
+			window.hide_at_step3_interval = setInterval(
+				() =>
+					Object.keys(id_fn).forEach(id =>
+						document.getElementById(id) && id_fn[id]()
+					),
+				500
+			)
+		}
+
+		var load_script = (url, cb) => {
+			var
+				script = document.createElement('script'),
+				other = document.getElementsByTagName('script')[0];
+
+				script.onload = cb;
+				script.src = url;
+				other.parentNode.insertBefore(script, other);
+		};
+
+		// real example of usage load_script
+		load_script('https://wr.io/assets/js/wrio.metamask.plugin.js', () =>
+			installed(idmm, () =>
+				connected(idmm, () =>
+					main_net_selected(idmm, () =>
+						metamask_login_done(idmm, () => {
+							document.getElementById('eth_address').previousElementSibling.style.display = '';
+							document.getElementById('eth_address').style.display = "block";
+							document.getElementById("logged_as").innerHTML = "<b>"+web3.eth.defaultAccount+"</b>";
+							document.getElementById('eth_address').value = web3.eth.defaultAccount || new Web3(window.web3.currentProvider).eth.defaultAccount;
+							document.getElementById(idmm).innerHTML = '<input href="#" id="login_btn" class="btn" onClick="check();" value="Login with Metamask">';
+						})
+					)
+				)
+			)
+		);
+
+		function logged(){
+			$('html,body').scrollTop(0);
+			document.getElementById("login_form").style.display = "none";
+			document.getElementById("affiliates").style.display = "none";
+			document.getElementById("wrio").style.display = "none";
+			document.getElementById("logout").style.display = "block";
+		}
+
+		function dashboard(){
+			logged();
+			if (tokensleft <= 0) {
+				document.getElementById("sold2").innerHTML = "<h2>SOLD OUT!</h2><p>You still can complete payment to get reserved WGD.</p>";
+			} else {
+				document.getElementById('tokeswidth2').style.width = percent + "%"
+			}
+			document.getElementById("dashboard").style.display = "block";
+
+			var account = web3.eth.defaultAccount || new Web3(window.web3.currentProvider).eth.defaultAccount;
+        $.ajax('https://storage.wrioos.com/supporter_round/token?account=' + account).always(() => {
+            fetch('https://wr.io/supporter_round/kyc_tokens/' + account)
+                .then(_ => _.text())
+                .then(token => {
+                    window._idm = {
+                        container_id: "idm-container",
+                        plugin_token: token,
+                        required_id_country_list:['US::^(?!666|000|9\\d{2})\\d{3}[- ]{0,1}(?!00)\\d{2}[- ]{0,1}(?!0{4})\\d{4}$'],
+                        country_blacklist: ['US'],
+                        on_response: function(jwtresponse) {
+                            const array = jwtresponse.split('.');
+                            const header = JSON.parse(atob(array[0]));
+                            const response = JSON.parse(atob(array[1]));
+                            const signature = array[2];
+
+												    document.getElementById("form_firstname").value = response.form_data.full_name;
+												    document.getElementById("form_lastname").value = response.form_data.last_name;
+												    document.getElementById("form_email").value = response.form_data.email;
+														var e = document.getElementById("WGD");
+														document.getElementById("form_wgd").value = e.options[e.selectedIndex].value*25+',000';
+														document.getElementById("form_ethaddress").value = web3.eth.defaultAccount;
+												    document.getElementById("form_kyc").value = response.kyc_result;
+
+														if (response.kyc_result === 'ACCEPT') {
+							               document.getElementsByClassName("idm")[0].style.display = "none";
+							               document.getElementById("kyc_completed").style.display = "block";
+                            } else {
+							               document.getElementsByClassName("idm")[0].style.display = "none";
+							               document.getElementById("kyc_manual_review").style.display = "block";
+							              }
+
+												    document.getElementById('gform-btn').click();
+														//end
+                        }
+                    };
+                    load_script('https://cd1st.identitymind.com/idm.min.js', () => {
+											hide_at_step3({
+												'middle_name': () => document.getElementById("middle_name").style.display = "none",
+												'agree': () => {
+													document.getElementById("agree").checked = true;
+													document.getElementById("agree").style.display = "none";
+													document.getElementById("agree_checkbox").style.display = "none";
+												}
+											});
+										});
+                })
+        })
+		}
+
+
+			var completed = false;
+			var record = false;
+			function result_show(){
+				check_completed();
+			}
+
+					function check_completed(){ // checking user payment status
+						address = document.getElementById("eth_address").value;
+						var url = "https://spreadsheets.google.com/feeds/list/1YqDOMfPw7Xd5rryouF931Y3aSfUboNGkip7qMdvY3BQ/2/public/values?alt=json";
+						$.getJSON(url, function(data) {
+						 var entry = data.feed.entry;
+						 $(entry).each(function(){
+							 if (this.gsx$ethaddress.$t == address){
+									 completed = true;
+									 logged();
+
+									 document.getElementById('balance_dashboard').style.display = 'block';
+									 document.getElementById('content').style.opacity = '100';
+									 document.getElementById('content').style.transition = 'opacity 2000ms';
+									 $('#reward').prepend(''+this.gsx$wgd.$t);
+									 $('#txhash_link').prepend('<p class="text-center">Your <a href="https://etherscan.io/tx/'+this.gsx$txhash.$t+'" target="_blank">transaction link</a>&nbsp;<sup><i class="fa fa-window-maximize"></i></sup></i> on Etherscan.io</p>');
+									 $('#user_address').prepend(''+address);
+							}
+						 });
+
+						 if (completed == false){
+						 	incompleted();
+						 }
+
+					 });
+					}
+
+					function incompleted(){ // if incompleted
+					 address = document.getElementById("eth_address").value;
+					 var url = "https://spreadsheets.google.com/feeds/list/1YqDOMfPw7Xd5rryouF931Y3aSfUboNGkip7qMdvY3BQ/1/public/values?alt=json";
+					 $.getJSON(url, function(data) {
+						var entry = data.feed.entry;
+						$(entry).each(function(){
+							if (this.gsx$ethaddress.$t == address){
+								 record = true;
+								 dashboard();
+								 wgd_reserved_amount = this.gsx$wgd.$t;
+								 $('#reserved_amount').prepend(''+this.gsx$wgd.$t+' for '+parseInt(wgd_reserved_amount)/25+' ETH');
+								 step2();
+								 document.getElementById('step2_btn').click();
+								 step3();
+
+		 							 if (this.gsx$kyc.$t == 'ACCEPT'){
+						 					// loading data
+						 					document.getElementById("form_firstname").value = this.gsx$firstname.$t;
+						 					document.getElementById("form_lastname").value = this.gsx$lastname.$t;
+						 					document.getElementById("form_email").value = this.gsx$email.$t;
+						 					document.getElementById("form_wgd").value = this.gsx$wgd.$t;
+						 					document.getElementById("form_ethaddress").value = this.gsx$ethaddress.$t;
+						 					document.getElementById("form_friend").value = this.gsx$friend.$t;
+
+		 								 document.getElementById("kyc").style.display = "none";
+		 								 document.getElementById("kyc_completed").style.display = "block";
+		 								 document.getElementById('step3_btn').click();
+		 							 } else {
+		 								 document.getElementById("kyc").style.display = "none";
+		 								 document.getElementById("kyc_manual_review").style.display = "block";
+		 							 }
+
+						 }
+						});
+
+						if (record == false && tokensleft > 0){
+						 	dashboard();
+						} else {
+							document.getElementById("no_account").innerHTML = '<h2>No such account!</h2>';
+
+							document.getElementById('no_account').style.opacity = '0';
+							document.getElementById('no_account').style.opacity = '100';
+							document.getElementById('no_account').style.transition = 'opacity 1000ms';
+						}
+
+					 });
+					}
+		</script>
+		<script data-cfasync="false" type="text/javascript" src="../assets/js/sr-submission-handler.js"></script>
+		<script type="text/javascript">
+			var eth_address;
+			function onload() {
+					eth_address = document.getElementById('eth_address');
+			}
+
+			//take affiliate
+			var url_string = document.URL;
+			var url = new URL(url_string);
+			document.getElementById("form_friend").value = url.searchParams.get("friend");
+
+			//smooth anchors
+			let anchorlinks = document.querySelectorAll('a[href^="#"]')
+			for (let item of anchorlinks) {
+			    item.addEventListener('click', (e)=> {
+			        let hashval = item.getAttribute('href')
+			        let target = document.querySelector(hashval)
+			        target.scrollIntoView({
+			            behavior: 'smooth',
+			            block: 'start'
+			        })
+			        history.pushState(null, null, hashval)
+			        e.preventDefault()
+			    })
+			}
+		</script>
+
+
+    <script type="text/javascript">
+        window.addEventListener('load', function () {
+            if (typeof web3 !== 'undefined') {
+                console.log('Web3 Detected! ' + web3.currentProvider.constructor.name)
+                window.web3 = new Web3(web3.currentProvider);
+            } else {
+                console.log('No Web3 Detected... using HTTP Provider')
+                window.web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/noapikey"));
+            }
+        })
+        function check() {
+					document.getElementById('error').style.opacity = '0';
+            var address, wei, balance
+            address = document.getElementById("eth_address").value
+            try {
+								document.getElementById('login_btn').disabled = true;
+								document.getElementById('login_btn').value = 'Please wait';
+                web3.eth.getBalance(address, function (error, wei) {
+                    if (!error) {
+											result_show();
+                    }
+                });
+            } catch (err) {
+								document.getElementById('login_btn').disabled = false;
+								document.getElementById('login_btn').value = 'Login with Metamask';
+								document.getElementById('error').style.opacity = '100';
+								document.getElementById('error').style.transition = 'opacity 1000ms';
+            }
+        }
+    </script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99131563-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-99131563-1');
+	</script><link rel="shortcut icon" href=".ico">
+</body>
+</html>
