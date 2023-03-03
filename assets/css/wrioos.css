@@ -106,7 +106,7 @@ textarea{width:100%}
 .team-circle .team-title{font-size:1em}
 .single-skill-bar{text-transform:none}
 .skill-bars.right .skill-bar-percent{left:auto;right:0}
-.roadmap-line{background:url('../images/roadmap_line.png') center repeat-x;background-position-y:86px}
+.roadmap-line{font-size:32px;margin:16px;font-weight:bold;color:#337bff}
 .team-circle .team-photo:before{opacity:.6;transform:translateX(-50%) scale(0.9)}
 .team-profile{max-width:600px}
 .team-profile .team-profile-info{padding:40px 0 0;text-align:center}
